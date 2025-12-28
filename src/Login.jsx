@@ -1,4 +1,4 @@
-import {use, useEffect,useRef,useState} from "react";
+import {useEffect,useRef,useState} from "react";
 import {useNavigate} from "react-router-dom";
 export default function Login({setIsAuth}){
     const[email,setEmail]=useState("");
@@ -10,9 +10,9 @@ export default function Login({setIsAuth}){
     },[]);
     const handleLogin=(e)=>{
         e.preventDefault();
-        const valid=email.trim("")=="admin@gmail.com" && password.trim("")=="admin123";
+        const valid=email.trim()=="admin@gmail.com" && password.trim()=="admin1234";
         if (valid){
-            alert("Login Successful");
+            alert("Login Success");
             setIsAuth(true);
             navigate("/admin");
         }else{
@@ -24,10 +24,10 @@ export default function Login({setIsAuth}){
             <h2>Login</h2>
             <form className="card" onSubmit={handleLogin}>
                 <label>
-                    Email: <input type="email" ref={emailRef} value={email} onChange={(e)=>setEmail(e.target.value)} />
+                    Email:{" "} <input type="email" ref={emailRef} value={email} onChange={(e)=>setEmail(e.target.value)} />
                 </label>
                 <label>
-                    Password: <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+                    Password:{" "} <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
                 </label>
                 <button type="submit">Login</button>
             </form>

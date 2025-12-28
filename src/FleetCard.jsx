@@ -4,14 +4,14 @@ const FleetCard=React.memo(
         const {id,regNo,category,driver,available,image}=fleet;
         return(
             <div className=" card fleet-card">
-                <img src={image} alt="Vehical" className="thump" />
+                <img src={image} alt="Vehicle" className="thumb" />
                 <div className="fleet-info">
-                    <p><storng>Reg No:</storng>{regNo}</p>
+                    <p><strong>Reg No:</strong>{regNo}</p>
                     <p><strong>Category:</strong>{category}</p>
                     <p><strong>Driver:</strong>{driver}</p>
                     <p><strong>Status:</strong>{" "}
                     <span className={available? "ok" : "bad"}>
-                        {available ? "Available" : "Not Available"}
+                        {available ? "Available" : "Unavailable"}
                     </span>
                     </p>
                 </div>

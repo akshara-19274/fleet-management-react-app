@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Routes,Route} from 'react-router-dom';
 import Login from './Login.jsx';
-import AdminDashboard from './Admin.jsx';
+import Admin from './Admin.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
 
 export default function App(){
