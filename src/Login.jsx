@@ -20,6 +20,17 @@ export default function Login({setIsAuth}){
         }
     };
     return(
-        <div></>
-    )
+        <div className="container">
+            <h2>Login</h2>
+            <form className="card" onSubmit={handleLogin}>
+                <label>
+                    Email: <input type="email" ref={emailRef} value={email} onChange={(e)=>setEmail(e.target.value)} />
+                </label>
+                <label>
+                    Password: <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+                </label>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    );
 }
